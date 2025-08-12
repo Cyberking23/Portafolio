@@ -97,7 +97,7 @@
     "yaml": "^2.8.0"
   },
   "scripts": {
-     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "repository": {
     "type": "git",
