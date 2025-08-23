@@ -1,311 +1,235 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background-color: #0a0a23; /* Negro azulado puro */
-    }
-    .profile-clip {
-      clip-path: polygon(
-        20% 0%, 80% 0%, 100% 25%, 100% 75%, 80% 100%, 20% 100%, 0% 75%, 0% 25%
-      );
-      background-color: #102a7d; /* azul oscuro */
-      box-shadow: 0 0 20px #2a4bd1cc; /* sombra azul vibrante */
-    }
-    .profile-clip img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      clip-path: inherit;
-      border: 4px solid #0a0a23; /* borde coincide con fondo */
-      filter: drop-shadow(0 0 5px #2a4bd1cc);
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carlos Merino - Desarrollador Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #1a1a2e; /* Fondo oscuro y elegante */
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background-color: #764ba2;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #667eea;
+            box-shadow: 0 4px 15px 0 rgba(118, 75, 162, 0.75);
+        }
+
+        .section-heading::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #667eea;
+            margin: 0 auto 1rem;
+            border-radius: 2px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
 </head>
-<body class="font-poppins text-blue-200">
+<body class="font-roboto text-gray-200">
 
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-[#070b3f]/95 backdrop-blur-md shadow-md z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
-      <!-- Izquierda: logo -->
-      <div class="flex items-center space-x-3 select-none">
-        <!-- Triángulo / A estilizado -->
-        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 2 L22 20 L2 20 Z" />
-        </svg>
-        <span class="text-blue-100 font-bold text-xl">Portfolio</span>
-      </div>
-      <!-- Derecha: enlaces y buscador -->
-      <nav class="flex items-center space-x-8">
-        <ul class="flex space-x-8 text-blue-300 font-medium select-none">
-          <li><a href="#home" class="hover:text-blue-500 transition">Home</a></li>
-          <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
-          <li><a href="#resume" class="hover:text-blue-500 transition">Resume</a></li>
-          <li><a href="#skills" class="hover:text-blue-500 transition">Skills</a></li>
-          <li><a href="#experience" class="hover:text-blue-500 transition">Experience</a></li>
-          <li><a href="#about" class="hover:text-blue-500 transition">About Me</a></li>
-          <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
-        </ul>
-        <form class="flex items-center space-x-2" onsubmit="event.preventDefault(); alert('Buscar no implementado');">
-          <button type="submit" aria-label="Buscar" class="text-blue-300 hover:text-blue-500 transition">🔍</button>
-          <input type="search" placeholder="Search..." class="bg-[#091441] border border-[#1433b3] rounded px-2 py-1 text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-600" />
-          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded font-semibold transition">Search</button>
-        </form>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center max-w-7xl mx-auto px-6 pt-24 md:pt-32">
-    <div class="grid md:grid-cols-2 gap-12 w-full items-center">
-
-      <!-- Izquierda: texto -->
-      <div class="space-y-6 max-w-lg">
-        <p class="text-blue-300 text-base uppercase tracking-wide select-none">Hol soy</p>
-        <h1 class="text-blue-100 font-extrabold text-6xl leading-tight select-text">Carlos Merino</h1>
-        <h2 class="text-blue-500 font-semibold text-3xl select-text">Desarrollador Full Stack</h2>
-        <p class="text-blue-300 leading-relaxed text-base select-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-        </p>
-      
-         <div class="flex items-center space-x-6 mt-6 select-none">
+    <header class="fixed top-0 left-0 w-full bg-[#1a1a2e]/90 backdrop-blur-md z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
+            <a href="#home" class="text-xl font-bold gradient-text">Carlos Merino</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <ul class="flex space-x-8 text-sm font-medium">
+                    <li><a href="#about" class="hover:text-[#667eea] transition">Sobre mí</a></li>
+                    <li><a href="#experience" class="hover:text-[#667eea] transition">Experiencia</a></li>
+                    <li><a href="#education" class="hover:text-[#667eea] transition">Educación</a></li>
+                    <li><a href="#projects" class="hover:text-[#667eea] transition">Proyectos</a></li>
+                    <li><a href="#skills" class="hover:text-[#667eea] transition">Habilidades</a></li>
+                    <li><a href="#contact" class="hover:text-[#667eea] transition">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-white text-2xl">☰</button>
         </div>
-      </div>
+    </header>
 
-      <!-- Derecha: Imagen con forma geométrica -->
-      <div class="profile-clip w-60 h-72 mx-auto md:mx-0">
-
-      </div>
-    </div>
-  </section>
-
-  <!-- What I Do Section -->
-  <section id="projects" class="max-w-7xl mx-auto px-6 py-20">
-    <p class="text-blue-300 uppercase tracking-wider text-sm mb-2 text-center select-none">My services</p>
-    <h2 class="text-blue-100 text-5xl font-extrabold mb-12 text-center select-text">What I Do</h2>
-
-    <div class="grid md:grid-cols-3 gap-10">
-      <!-- Tarjeta 1 -->
-      <div class="bg-[#111c3a] rounded-xl shadow-md p-8 flex flex-col space-y-4 hover:shadow-lg transition cursor-pointer">
-        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
-          <circle cx="12" cy="12" r="10" />
-        </svg>
-        <h3 class="text-blue-100 font-bold text-xl">UI/UX Designer</h3>
-        <p class="text-blue-300 text-sm leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center p-6">
+        <div class="relative w-48 h-48 mb-8 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl">
+            <img src="https://via.placeholder.com/200?text=Carlos" alt="Foto de perfil de Carlos Merino" class="w-full h-full object-cover">
+            <span class="absolute bottom-2 right-2 w-4 h-4 bg-green-500 rounded-full border-2 border-[#1a1a2e]"></span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white mb-4">Carlos Merino</h1>
+        <p class="text-xl md:text-2xl font-light text-gray-400 mb-6">Desarrollador Web</p>
+        <p class="max-w-2xl text-lg text-gray-300">
+            Estudiante de Técnico en Ciencias de la Computación con sólidos valores de responsabilidad y disciplina. Busco una oportunidad para aplicar mis conocimientos y seguir desarrollándome, contribuyendo activamente a los objetivos de una empresa.
         </p>
-      </div>
-      <!-- Tarjeta 2 -->
-      <div class="bg-[#111c3a] rounded-xl shadow-md p-8 flex flex-col space-y-4 hover:shadow-lg transition cursor-pointer">
-        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-        <h3 class="text-blue-100 font-bold text-xl">Graphic Designer</h3>
-        <p class="text-blue-300 text-sm leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-      <!-- Tarjeta 3 -->
-      <div class="bg-[#111c3a] rounded-xl shadow-md p-8 flex flex-col space-y-4 hover:shadow-lg transition cursor-pointer">
-        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h4l3 8 4-16 3 8h4" />
-        </svg>
-        <h3 class="text-blue-100 font-bold text-xl">Web Designer</h3>
-        <p class="text-blue-300 text-sm leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
-  </section>
+        <div class="mt-8 flex justify-center space-x-4">
+            <a href="https://github.com/Cyberking23?tab=repositories" target="_blank" class="text-white hover:text-purple-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.008c-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.744.08-.73.08-.73 1.205.086 1.838 1.24 1.838 1.24 1.07 1.832 2.809 1.305 3.495.996.11-.775.424-1.306.777-1.606-2.665-.3-5.462-1.332-5.462-5.93 0-1.31.465-2.38 1.233-3.22-.123-.3-1.53-1.527.123-3.175 0 0 1-.318 3.29 1.22.955-.264 1.97-.396 3-.396s2.045.132 3 .396c2.29-1.538 3.285-1.22 3.285-1.22 1.653 1.648.237 2.875.123 3.175.77.84 1.232 1.91 1.232 3.22 0 4.608-2.8 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.292c0 .32.21.7.82.578C20.56 22.095 24 17.597 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="mailto:merinoventura123@gmail.com" class="text-white hover:text-purple-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.85-8.623h23.7l-11.85 8.623zm-.008 1.328l-11.992-8.72v15.917h23.992v-15.917l-11.992 8.72z"/></svg>
+            </a>
+        </div>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="max-w-7xl mx-auto px-6 py-20 bg-[#070b3f] rounded-xl shadow-lg">
-    <h2 class="text-blue-100 text-4xl font-extrabold mb-8 text-center select-text">Habilidades Técnicas</h2>
-    <div class="grid md:grid-cols-3 gap-12">
-      <div>
-        <h3 class="text-blue-600 font-semibold text-2xl mb-4">Frontend</h3>
-        <ul class="list-disc list-inside text-blue-300 space-y-2">
-          <li>HTML5, CSS3, JavaScript (ES6+)</li>
-          <li>React.js, Vue.js</li>
-          <li>TailwindCSS, Bootstrap</li>
-          <li>Responsive Design</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-blue-600 font-semibold text-2xl mb-4">Backend</h3>
-        <ul class="list-disc list-inside text-blue-300 space-y-2">
-          <li>Node.js, Express</li>
-          <li>PHP, Laravel</li>
-          <li>Python, Flask</li>
-          <li>Bases de datos: MySQL, MongoDB</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-blue-600 font-semibold text-2xl mb-4">Herramientas & Otros</h3>
-        <ul class="list-disc list-inside text-blue-300 space-y-2">
-          <li>Git & GitHub</li>
-          <li>Docker</li>
-          <li>Webpack, Vite</li>
-          <li>SEO básico</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <main class="max-w-7xl mx-auto px-6 py-12">
 
-  <!-- Experience Section -->
-  <section id="experience" class="max-w-7xl mx-auto px-6 py-20 mt-16">
-    <h2 class="text-blue-100 text-4xl font-extrabold mb-8 text-center select-text">Experiencia Laboral</h2>
-    <div class="space-y-12 max-w-4xl mx-auto text-blue-300">
-      <div>
-        <h3 class="text-blue-600 text-2xl font-semibold">Front-End Developer - Empresa XYZ</h3>
-        <p class="italic mb-2">Enero 2021 - Presente</p>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Desarrollo de interfaces web responsivas y accesibles.</li>
-          <li>Colaboración con equipos de diseño para mejorar UX/UI.</li>
-          <li>Optimización del rendimiento y SEO de sitios web.</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-blue-600 text-2xl font-semibold">Diseñador Gráfico - Agencia Creativa</h3>
-        <p class="italic mb-2">Julio 2019 - Diciembre 2020</p>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Creación de material visual para campañas publicitarias.</li>
-          <li>Diseño de branding y material corporativo.</li>
-          <li>Soporte en la estrategia de comunicación digital.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        <section id="about" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 section-heading">Sobre Mí</h2>
+            <div class="bg-[#24243a] p-8 rounded-xl shadow-lg">
+                <p class="text-lg leading-relaxed text-gray-300 text-center">
+                    Soy un <strong class="text-white">estudiante de Técnico en Ciencias de la Computación</strong> con sólidos valores de responsabilidad y disciplina. Busco una oportunidad donde pueda aplicar mis conocimientos y continuar desarrollándome, contribuyendo activamente al cumplimiento de objetivos en un entorno profesional.
+                </p>
+            </div>
+        </section>
+        
+        <hr class="border-t border-gray-700 my-16">
 
-  <!-- Education Section -->
-  <section id="education" class="max-w-7xl mx-auto px-6 py-20 bg-[#070b3f] rounded-xl shadow-lg mt-16">
-    <h2 class="text-blue-100 text-4xl font-extrabold mb-8 text-center select-text">Formación Académica</h2>
-    <div class="space-y-12 max-w-4xl mx-auto text-blue-300">
-      <div>
-        <h3 class="text-blue-600 text-2xl font-semibold">Licenciatura en Diseño Gráfico</h3>
-        <p class="italic mb-2">Universidad ABC, 2015 - 2019</p>
-        <p>Formación integral en diseño, comunicación visual, y herramientas digitales.</p>
-      </div>
-      <div>
-        <h3 class="text-blue-600 text-2xl font-semibold">Bootcamp Frontend Developer</h3>
-        <p class="italic mb-2">Código Latino, 2020</p>
-        <p>Intensivo de 6 meses en tecnologías web modernas, con enfoque en React y TailwindCSS.</p>
-      </div>
-    </div>
-  </section>
+        <section id="experience" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 section-heading">Experiencia Laboral</h2>
+            <div class="bg-[#24243a] p-8 rounded-xl shadow-lg">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#667eea]">Soporte Técnico</h3>
+                        <p class="text-sm italic text-gray-400">Colegio Don Bosco, 2024</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-1">
+                            <li>Realicé soporte técnico especializado y mantenimiento integral de equipos informáticos.</li>
+                            <li>Realicé mantenimiento preventivo y correctivo a equipos de cómputo.</li>
+                            <li>Instalé y actualicé sistemas operativos, drivers y programas esenciales.</li>
+                            <li>Brindé asistencia a usuarios en la resolución de fallas técnicas básicas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- About Me Section -->
-  <section id="about" class="max-w-7xl mx-auto px-6 py-20 mt-16">
-    <h2 class="text-blue-100 text-4xl font-extrabold mb-8 text-center select-text">Sobre Mí</h2>
-    <div class="max-w-3xl mx-auto text-blue-300 leading-relaxed text-center">
-      <p>
-        Soy un apasionado diseñador y desarrollador web con más de 5 años de experiencia creando experiencias digitales intuitivas y atractivas. Me encanta combinar creatividad con tecnología para ofrecer soluciones innovadoras y funcionales. Mi enfoque está en la calidad, la usabilidad y la mejora continua.
-      </p>
-      <div class="mt-8 flex justify-center space-x-6">
-        <a href="https://github.com/tuusuario" target="_blank" aria-label="GitHub" class="hover:text-blue-500 transition text-3xl">
-          <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
-            <path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.85 2.83 1.32 3.52 1 .11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0012 .5z" />
-          </svg>
-        </a>
-        <a href="https://linkedin.com/in/tuusuario" target="_blank" aria-label="LinkedIn" class="hover:text-blue-500 transition text-3xl">
-          <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
-            <path d="M4.98 3.5a2.5 2.5 0 11-.002 5.002 2.5 2.5 0 01.002-5.002zM2 8.98h6v12H2v-12zm7.42 0h5.6v1.74h.08c.78-1.48 2.7-3.05 5.56-3.05 5.95 0 7.05 3.92 7.05 9.01v10.3h-6v-9.13c0-2.18-.04-5-3.05-5-3.06 0-3.53 2.39-3.53 4.87v9.26h-6v-12z" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
+        <hr class="border-t border-gray-700 my-16">
 
-  <!-- Main Projects Section -->
-  <section id="main-projects" class="max-w-7xl mx-auto px-6 py-20 bg-[#070b3f] rounded-xl shadow-lg mt-16">
-    <h2 class="text-blue-100 text-4xl font-extrabold mb-12 text-center select-text">Proyectos Principales</h2>
-    <div class="grid md:grid-cols-3 gap-10">
-      <!-- Proyecto 1 -->
-      <div class="bg-[#111c3a] rounded-xl shadow-md p-6 hover:shadow-lg transition cursor-pointer flex flex-col">
-        <img src="https://via.placeholder.com/300x180?text=Proyecto+1" alt="Proyecto 1" class="rounded-lg mb-4 object-cover h-44 w-full" />
-        <h3 class="text-blue-600 font-bold text-xl mb-2">Proyecto Uno</h3>
-        <p class="text-blue-300 flex-grow">
-          Breve descripción del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-        <p class="mt-2 text-sm text-blue-400">Tecnologías: React, TailwindCSS, Node.js</p>
-        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Ver código</a>
-      </div>
-      <!-- Proyecto 2 -->
-      <div class="bg-[#111c3a] rounded-xl shadow-md p-6 hover:shadow-lg transition cursor-pointer flex flex-col">
-        <img src="https://via.placeholder.com/300x180?text=Proyecto+2" alt="Proyecto 2" class="rounded-lg mb-4 object-cover h-44 w-full" />
-        <h3 class="text-blue-600 font-bold text-xl mb-2">Proyecto Dos</h3>
-        <p class="text-blue-300 flex-grow">
-          Breve descripción del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-        <p class="mt-2 text-sm text-blue-400">Tecnologías: Vue.js, Firebase, CSS3</p>
-        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Ver código</a>
-      </div>
-      <!-- Proyecto 3 -->
-      <div class="bg-[#111c3a] rounded-xl shadow-md p-6 hover:shadow-lg transition cursor-pointer flex flex-col">
-        <img src="https://via.placeholder.com/300x180?text=Proyecto+3" alt="Proyecto 3" class="rounded-lg mb-4 object-cover h-44 w-full" />
-        <h3 class="text-blue-600 font-bold text-xl mb-2">Proyecto Tres</h3>
-        <p class="text-blue-300 flex-grow">
-          Breve descripción del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-        <p class="mt-2 text-sm text-blue-400">Tecnologías: HTML5, CSS3, PHP</p>
-        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Ver código</a>
-      </div>
-    </div>
-  </section>
+        <section id="education" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 section-heading">Formación Académica</h2>
+            <div class="bg-[#24243a] p-8 rounded-xl shadow-lg">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#667eea]">Técnico en Ingeniería en Computación</h3>
+                        <p class="text-sm italic text-gray-400">Universidad Don Bosco, 2024 - Progreso</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#667eea]">Bachillerato Técnico Vocacional en Desarrollo de Software</h3>
+                        <p class="text-sm italic text-gray-400">Colegio Don Bosco, 2022 - 2024</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#667eea]">Educación Básica</h3>
+                        <p class="text-sm italic text-gray-400">Colegio Don Bosco, 2011 - 2021</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Soft Skills & Hobbies -->
-  <section id="soft-skills" class="max-w-7xl mx-auto px-6 py-20 mt-16">
-    <h2 class="text-blue-100 text-4xl font-extrabold mb-8 text-center select-text">Habilidades Blandas & Aficiones</h2>
-    <div class="max-w-4xl mx-auto text-blue-300 grid md:grid-cols-2 gap-12">
-      <div>
-        <h3 class="text-blue-600 font-semibold text-2xl mb-4">Habilidades Blandas</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>Comunicación efectiva</li>
-          <li>Trabajo en equipo</li>
-          <li>Liderazgo</li>
-          <li>Resolución de problemas</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-blue-600 font-semibold text-2xl mb-4">Aficiones</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>Lectura de tecnología y diseño</li>
-          <li>Fotografía</li>
-          <li>Viajes</li>
-          <li>Música</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        <hr class="border-t border-gray-700 my-16">
 
-  <!-- Contact Section -->
-  <section id="contact" class="max-w-7xl mx-auto px-6 py-20 bg-[#070b3f] rounded-xl shadow-lg mt-16">
-    <h2 class="text-blue-100 text-4xl font-extrabold mb-8 text-center select-text">Contacto</h2>
-    <div class="max-w-3xl mx-auto text-blue-300">
-      <p class="mb-4 text-center">
-        ¿Quieres ponerte en contacto conmigo? ¡Escríbeme un correo!
-      </p>
-      <div class="flex flex-col md:flex-row md:justify-center md:space-x-8 space-y-6 md:space-y-0 items-center">
-        <a href="mailto:tayyab@example.com" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded px-6 py-3 transition shadow-md select-none">
-          tayyab@example.com
-        </a>
-        <a href="/cv.pdf" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded px-6 py-3 transition shadow-md select-none">
-          Descargar CV (PDF)
-        </a>
-      </div>
-    </div>
-  </section>
+        <section id="projects" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 section-heading">Proyectos Individuales</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#24243a] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                    <h3 class="text-xl font-semibold text-[#667eea] mb-2">Aplicación web de notas</h3>
+                    <p class="text-gray-400 text-sm mb-4">Plataforma interactiva para la gestión de notas.</p>
+                    <div class="flex flex-wrap justify-center space-x-2 text-xs font-medium mb-4">
+                        <span class="bg-purple-600/30 text-purple-200 px-2 py-1 rounded-full">React.js</span>
+                        <span class="bg-purple-600/30 text-purple-200 px-2 py-1 rounded-full">Node.js</span>
+                        <span class="bg-purple-600/30 text-purple-200 px-2 py-1 rounded-full">Express.js</span>
+                    </div>
+                    <a href="#" class="btn-primary text-white font-medium px-4 py-2 rounded-full mt-auto">Ver proyecto</a>
+                </div>
 
-  <!-- Footer -->
-  <footer class="bg-[#070b3f] mt-20 py-8 text-center text-blue-400 text-sm select-none">
-    © 2025 Tayyab Sajjad. Todos los derechos reservados.
-  </footer>
+                <div class="bg-[#24243a] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                    <h3 class="text-xl font-semibold text-[#667eea] mb-2">API RESTful para gestión de productos</h3>
+                    <p class="text-gray-400 text-sm mb-4">Desarrollo de API para operaciones CRUD.</p>
+                    <div class="flex flex-wrap justify-center space-x-2 text-xs font-medium mb-4">
+                        <span class="bg-purple-600/30 text-purple-200 px-2 py-1 rounded-full">Laravel</span>
+                        <span class="bg-purple-600/30 text-purple-200 px-2 py-1 rounded-full">MySQL</span>
+                    </div>
+                    <a href="#" class="btn-primary text-white font-medium px-4 py-2 rounded-full mt-auto">Ver proyecto</a>
+                </div>
+
+                <div class="bg-[#24243a] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                    <h3 class="text-xl font-semibold text-[#667eea] mb-2">Sistema de gestión de notas</h3>
+                    <p class="text-gray-400 text-sm mb-4">Aplicación para creación, edición y eliminación de notas.</p>
+                    <div class="flex flex-wrap justify-center space-x-2 text-xs font-medium mb-4">
+                        <span class="bg-purple-600/30 text-purple-200 px-2 py-1 rounded-full">Laravel</span>
+                        <span class="bg-purple-600/30 text-purple-200 px-2 py-1 rounded-full">MySQL</span>
+                    </div>
+                    <a href="#" class="btn-primary text-white font-medium px-4 py-2 rounded-full mt-auto">Ver proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-gray-700 my-16">
+
+        <section id="skills" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 section-heading">Habilidades y Certificaciones</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#24243a] rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-[#667eea] mb-4">Frontend</h3>
+                    <ul class="space-y-2">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React.js</li>
+                    </ul>
+                </div>
+                <div class="bg-[#24243a] rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-[#667eea] mb-4">Backend</h3>
+                    <ul class="space-y-2">
+                        <li>PHP</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Laravel</li>
+                    </ul>
+                </div>
+                <div class="bg-[#24243a] rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-[#667eea] mb-4">Herramientas & Bases de Datos</h3>
+                    <ul class="space-y-2">
+                        <li>MySQL</li>
+                        <li>Git & Github</li>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+                <div class="bg-[#24243a] rounded-xl shadow-lg p-6 md:col-span-3">
+                    <h3 class="text-xl font-semibold text-[#667eea] mb-4">Certificaciones</h3>
+                    <ul class="space-y-2 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <li><strong class="text-white">Desarrollador Backend</strong><br><span class="text-sm italic text-gray-400">Fundación Carlos Slim</span></li>
+                        <li><strong class="text-white">Desarrollador Frontend</strong><br><span class="text-sm italic text-gray-400">Fundación Carlos Slim</span></li>
+                        <li><strong class="text-white">Técnico en Redes de Datos</strong><br><span class="text-sm italic text-gray-400">Fundación Carlos Slim</span></li>
+                        <li><strong class="text-white">Certificación en Idioma Inglés</strong><br><span class="text-sm italic text-gray-400">Academia E4CC</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-gray-700 my-16">
+
+        <section id="contact" class="mb-16 text-center">
+            <h2 class="text-4xl font-bold text-white mb-12 section-heading">Ponte en contacto</h2>
+            <p class="text-lg text-gray-300 mb-6">Estoy disponible para nuevas oportunidades. ¡No dudes en contactarme!</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8">
+                <a href="mailto:merinoventura123@gmail.com" class="btn-primary text-white font-bold px-8 py-3 rounded-full text-lg shadow-lg">
+                    Email
+                </a>
+                <a href="uploads/Curriculum Vitae.pdf" target="_blank" class="btn-primary text-white font-bold px-8 py-3 rounded-full text-lg shadow-lg">
+                    Descargar CV
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#1a1a2e] py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 Carlos Merino. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
